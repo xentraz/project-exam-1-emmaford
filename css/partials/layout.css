@@ -1,0 +1,10 @@
+body {
+  margin: 0px;
+  padding: 0px;
+
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+}

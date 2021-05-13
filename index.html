@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="NEEEDEDDD!">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="./css/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emma's Travel Blog</title>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <p>E.F.T</p>
+    </div>
+    <div class="menu_wrapper">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="/html/archive.html">Archive</a></li>
+        <li><a href="/html/about.html">About</a></li>
+        <li><a href="/html/contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <div class="intro">
+      <div class="bkg_color"></div>
+      <div class="index_slider">
+        <div class="slider_container">
+          <div class="slides fade">
+            <img src="./img/azhar-j-t2hgHV1R7_g-unsplash.jpg" alt="Image of the Amsterdam canal, with buildings along the side reflecting in the water, along with boats and cars lined up against the edge of the canal.">
+          </div>
+          <div class="slides fade">
+            <img src="./img/hieu-vu-minh-4eDiRuTHU30-unsplash.jpg" alt="Image of St. Paul's Cathedral in London seen between two glass buildings whith the cathedral reflected in them.">
+          </div>
+          <div class="slides fade">
+            <img src="./img/maksim-ivanov-WoHsVtaSkL4-unsplash.jpg" alt="Image of Benidorm, Spain seen from a mountain top at night with the sunset over the city.">
+          </div>
+          <div class="slides fade">
+            <img src="./img/madeleine-kohler-90Qn643Pq9c-unsplash.jpg" alt="Image of a street in Edinburgh, Scotland with brick buildings lining each side, the buildings contains colourful shops on the lower level and beige brick buildings above. The left side has seating area and railings above the colourful shops.">
+          </div>
+          <div class="slides fade">
+            <img src="./img/seeoslocity-aZfjp2QhWto-unsplash.jpg" alt="Image of a street in Oslo, Norway with colourful buildings and a church at the end of the road.">
+          </div>
+
+          <div class="controls">
+            <a class="previous" onclick="nextSlide(-1)">&#10094;</a>
+            <a class="next" onclick="nextSlide(1)">&#10095;</a>
+          </div>
+          <br>
+
+          <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+          </div>
+        </div>
+      </div>
+      <div class="index_about"></div>
+    </div>
+  </main>
+  <footer></footer>
+  <script src="./js/script.js"></script>
+</body>
+</html>
