@@ -8,3 +8,24 @@ body {
     'main'
     'footer';
 }
+
+h1 {
+  font-family: var(--h1);
+  font-size: 3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  color: var(--white);
+  border: var(--border-white);
+
+  padding: 5px 15px;
+}
+
+p {
+  font-family: var(--p);
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  color: var(--white);
+}
