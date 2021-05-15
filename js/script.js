@@ -1,3 +1,4 @@
+// Image Slider (GO THORUGH AND CHANGE NAMES)
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -24,3 +25,111 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+// API Fetch Featured Posts 
+let blogAPI = [];
+
+const getFeatured = async () => {
+	try {
+		const response = await fetch(
+			'https://noroffcors.herokuapp.com/https://xentraz.tech/wp-json/wp/v2/posts'
+		);
+
+		const featuredResponse = await response.json();
+		blogAPI = featuredResponse;
+    console.log(blogAPI)
+
+    featuredCards(blogAPI);
+
+	} catch (error) {
+		// document.querySelector('.alert').innerHTML = showAlertToUser (
+    //   'An error occured',
+    //   'danger'
+    // );
+		console.log(error);
+	} finally {
+		// setTimeout(function () {
+    //   document.querySelector('.alert').innerHTML = ``;
+    // }, 5000)
+	}
+};
+
+getFeatured();
+
+
+const featuredCards = (featuredArray) => {
+	const mainElm = document.querySelector('.featured_container');
+  for (let i = 0; i < featuredArray.length; i++) {
+    mainElm.innerHTML += `
+    <div class="card__containerBlog">
+    <a href="blog.html?id=${featuredArray[i].id}">
+      <img class="featuredImg" src="${featuredArray[i].jetpack_featured_media_url}"/>
+    </a>
+      <h3 class="cardTitleBlog">${featuredArray[i].title.rendered}</h3>
+      </div>`;
+  }
+}
+
+// document.querySelector('.index_featured').style.backgroundImage = `
+//     url('${featuredArray._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url}')`;
+
+
+// const gameCards = (GamesArray) => {
+// 	const mainElm = document.querySelector('.featuredInfo');
+//   for (let i = 0; i < GamesArray.length; i++) {
+//     if ((GamesArray[i].categories[0].name === 'Featured') || (GamesArray[i].categories[1].name === 'Featured')) {
+//       mainElm.innerHTML += 
+//       `
+//       <div class="gameCard">
+//       <div class="gameImg"><img src="${GamesArray[i].images[0].src}"/></div>
+//       <h3>${GamesArray[i].name}</h3>
+//       <div class="info-button"><a href="/html/details.html?id=${GamesArray[i].id}">More Info</a></div>
+//       </div>
+//       `;
+//     }
+//   }
+// }
+
+// IMAGES
+
+let blogAPI2 = [];
+
+const getMedia = async () => {
+	try {
+		const response = await fetch(
+			'https://noroffcors.herokuapp.com/https://xentraz.tech/wp-json/wp/v2/media?per_page=100'
+		);
+
+		const mediaResponse = await response.json();
+		blogAPI2 = mediaResponse;
+    console.log(blogAPI2)
+
+    mediaCards(blogAPI2);
+
+	} catch (error) {
+		// document.querySelector('.alert').innerHTML = showAlertToUser (
+    //   'An error occured',
+    //   'danger'
+    // );
+		console.log(error);
+	} finally {
+		// setTimeout(function () {
+    //   document.querySelector('.alert').innerHTML = ``;
+    // }, 5000)
+	}
+};
+
+getMedia();
+
+
+const mediaCards = (featuredArray2) => {
+	const mainElm = document.querySelector('.featured_container');
+  for (let i = 0; i < featuredArray2.length; i++) {
+    if(featuredArray2[i].alt_text === 'Edinburgh'){
+      mainElm.innerHTML += `
+    <div class="card__containerBlog2">
+      <img class="featuredImg" src="${featuredArray2[i].guid.rendered}"/>
+      `;
+    }
+  }
+};
