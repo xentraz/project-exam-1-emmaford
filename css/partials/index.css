@@ -242,3 +242,10 @@ main {
 .index_featured {
   height: 600px;
 }
+
+/* Featured Images */
+
+.featured_container .card__containerBlog .featuredImg {
+  height: 400px;
+  width: 400px;
+}
