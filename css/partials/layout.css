@@ -21,11 +21,32 @@ h1 {
   padding: 5px 15px;
 }
 
-p {
+h2 {
+  font-family: var(--h2);
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  color: var(--black);
+
+  padding: 0px;
+  margin: 0px;
+}
+
+.white_p {
   font-family: var(--p);
   font-size: 1.2rem;
   font-weight: 400;
   text-transform: uppercase;
 
   color: var(--white);
+}
+
+.black_p {
+  font-family: var(--p);
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  color: var(--black);
 }

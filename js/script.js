@@ -60,13 +60,17 @@ getFeatured();
 const featuredCards = (featuredArray) => {
 	const mainElm = document.querySelector('.featured_container');
   for (let i = 0; i < featuredArray.length; i++) {
-    mainElm.innerHTML += `
-    <div class="card__containerBlog">
-      <img class="featuredImg" src="${featuredArray[i].jetpack_featured_media_url}"/>
-    </a>
-      <h3 class="cardTitleBlog">${featuredArray[i].title.rendered}</h3>
-      <div class="info-button"><a href="/html/details.html?id=${featuredArray[i].id}">More Info</a></div>
+    if ((featuredArray[i].categories[0] === 33) || (featuredArray[i].categories[1] === 33) || (featuredArray[i].categories[2] === 33)) {
+      mainElm.innerHTML += `
+      <div class="featured_card">
+        <img class="featured_img" src="${featuredArray[i].jetpack_featured_media_url}"/>
+      <div class="feature_card_info">
+      <h2 class="featured_card_title">${featuredArray[i].title.rendered}</h2>
+      <p class="black_p">${featuredArray[i].date}</p>
+      </div>
+      <div class="more_button"><a href="/html/details.html?id=${featuredArray[i].id}">More Info</a></div>
       </div>`;
+    }
   }
 }
 
