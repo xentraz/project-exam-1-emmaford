@@ -36,8 +36,9 @@ main {
 
   background-color: var(--green);
 }
+
 /* https://www.w3schools.com/howto/howto_js_slideshow.asp */
-.intro .slider_container {
+.intro .index_slider {
   grid-column: 1/4;
   grid-row: 2/4;
 
@@ -49,42 +50,51 @@ main {
 
   display: inline-flex;
   justify-content: center;
+}
+
+.slider_container {
+  width: 80%;
+  margin: auto;
+
+  z-index: 3;
+  position: absolute;
+
+  display: inline-flex;
+  justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 
 .slides {
   display: none;
 
-  max-width: 100%;
+  width: 100%;
   margin: auto;
 }
 
 .slides img {
-  width: 80vw;
-  height: 75vh;
+  width: 100%;
+  max-height: 70vh;
 
   border: var(--border-white);
 }
 
-.controls {
+.slider_container .controls {
   grid-column: 1/4;
   grid-row: 2/4;
 
-  width: 79vw;
-  height: 75vh;
+  width: 99%;
+  max-height: auto;
 
   position: absolute;
-  display: flex;
 }
 
 .previous,
 .next {
   cursor: pointer;
   position: absolute;
-  top: 42%;
+  top: 45%;
 
-  z-index: 3;
+  z-index: 4;
 
   width: auto;
   padding: 15px;
@@ -118,12 +128,13 @@ main {
   grid-column: 1/4;
   grid-row: 2/4;
 
-  height: 68vh;
+  max-height: 70vh;
+  bottom: 2%;
 
   position: absolute;
+
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: end;
 }
 
 .dot {
@@ -249,25 +260,42 @@ main {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-
-  /* border: 1px solid green; */
 }
 
 .featured_card {
+  height: 50vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   border: var(--border-black);
   padding: 5px;
 }
 
 .featured_container .featured_img {
-  height: 200px;
-  width: 250px;
+  height: 250px;
+  width: 350px;
 }
 
-.feature_card_info {
+.featured_card_info {
+  height: 100%;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+
+.featured_card_info p {
+  font-family: var(--p);
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  color: var(--black);
+
+  padding: 0px;
 }
 
 .more_button {
