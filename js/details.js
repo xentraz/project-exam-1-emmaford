@@ -12,7 +12,6 @@ async function getPosts(id){
     const postsResults = await response.json(); 
 
     console.log(postsResults)
-
     document.title = postsResults.title.rendered; 
 
     document.querySelector('.post_info').innerHTML += 
@@ -46,7 +45,6 @@ getPosts(id);
 
 
 // POST DETAIL IMAGES 
-
 let mediaAPI = [];
 
 const getMedia = async () => {
@@ -59,8 +57,6 @@ const getMedia = async () => {
     console.log(mediaAPI)
 
     mediaCards(mediaAPI);
-
-    
 
 	} catch (error) {
 		document.querySelector('.alert').innerHTML = showAlertToUser (

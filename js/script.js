@@ -29,6 +29,8 @@ function showSlides(n) {
 // API Fetch Featured Posts 
 let blogAPI = [];
 
+document.querySelector('.loading').innerHTML =`<img src="https://cdn.dribbble.com/users/1747793/screenshots/4328938/web-loop.gif"/>`;
+
 const getFeatured = async () => {
 	try {
 		const response = await fetch(
@@ -40,6 +42,8 @@ const getFeatured = async () => {
     console.log(blogAPI)
 
     featuredCards(blogAPI);
+
+    recentCards(blogAPI);
 
 	} catch (error) {
 		document.querySelector('.alert').innerHTML = showAlertToUser (
@@ -55,24 +59,47 @@ const getFeatured = async () => {
       document.querySelector('.alert').innerHTML = ``;
     }, 10000)
 	}
+  document.querySelector('.loading').innerHTML = ``;
 };
 
 getFeatured();
 
 
 const featuredCards = (featuredArray) => {
-	const mainElm = document.querySelector('.featured_container');
+	const featElm = document.querySelector('.featured_posts');
   for (let i = 0; i < featuredArray.length; i++) {
     if ((featuredArray[i].categories[0] === 33) || (featuredArray[i].categories[1] === 33) || (featuredArray[i].categories[2] === 33)) {
-      mainElm.innerHTML += `
+      featElm.innerHTML += 
+      `
       <div class="featured_card">
         <img class="featured_img" src="${featuredArray[i].jetpack_featured_media_url}"/>
-        <div class="featured_card_info">
-          <h2 class="featured_card_title">${featuredArray[i].title.rendered}</h2>
+        <div class="featured_card_info" onclick="window.location.href='/html/details.html?id=${featuredArray[i].id}'">
+          <h3 class="featured_card_title">${featuredArray[i].title.rendered}</h3>
           <p class="black_p">${featuredArray[i].excerpt.rendered}</p>
         </div>
-        <div class="more_button"><a href="/html/details.html?id=${featuredArray[i].id}" class="black_p">More Info</a></div>
-      </div>`;
+      </div>
+      `;
     }
   }
 }
+
+const recentCards = (recentArray) => {
+  const recentElm = document.querySelector('.recent_posts'); 
+  for (let j = 0; j <recentArray.length; j++) {
+    recentElm.innerHTML += 
+    `
+    <div class="recent_card">  
+      <div class="recent_bkg"></div>
+      <h3 class="recent_card_title">${recentArray[j].title.rendered}</h3>
+      <div class="white_p date">${recentArray[j].excerpt.rendered}</div>
+      <p class="white_p recent_p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, omnis fugit! Fuga nihil odit sed ullam, quod dolor, iste sunt perspiciatis voluptatibus libero enim sit rerum aliquid repellendus accusantium, reiciendis cumque. Voluptatem, nam possimus in provident assumenda architecto adipisci iusto?</p>
+      <img class="recent_img1" src="${recentArray[j].jetpack_featured_media_url}"/>
+      <img class="recent_img2" src="${recentArray[j].jetpack_featured_media_url}"/>
+      <div class="recent_post_link">
+      <p class="white_p read_more_link" onclick="window.location.href='/html/details.html?id=${recentArray[j].id}'">Read More...</p>
+      </div>
+    </div>
+    `;
+  }
+}
+
