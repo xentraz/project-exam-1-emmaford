@@ -1,0 +1,8 @@
+footer {
+  grid-area: 'footer';
+
+  height: 100px;
+  margin: 3vh 0vw 0vh 0vw;
+
+  background-color: var(--green);
+}
