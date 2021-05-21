@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-main {
+.index_main {
   grid-area: 'main';
 
   display: grid;
@@ -164,7 +164,6 @@ main {
 /* Slider End */
 
 /* About */
-
 .intro .index_about {
   grid-column: 1/4;
   grid-row: 3/3;
@@ -236,13 +235,18 @@ main {
 .more_link a {
   font-family: var(--p);
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 300;
   text-decoration: none;
 
   color: var(--white);
 
   border-bottom: var(--w-link-border);
   padding-bottom: 2px;
+}
+
+.more_link:hover {
+  transform: translateX(5px);
+  transition-duration: 50ms;
 }
 
 /* About End */
@@ -307,6 +311,10 @@ main {
   width: 35vh;
 
   grid-row: 1/1;
+}
+
+.featured_card_info h3:hover {
+  font-weight: bold;
 }
 
 .featured_card_info {
@@ -463,7 +471,9 @@ main {
   z-index: 8;
 
   font-style: italic;
+  color: var(--white);
 }
+
 .recent_card .date,
 .recent_p,
 .recent_post_link {
@@ -483,12 +493,20 @@ main {
 
 .recent_img1 {
   grid-column: 3/6;
-  grid-row: 1/6;
+  grid-row: 1/5;
 
-  width: 80%;
+  width: 100%;
   height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recent_img1 img {
+  width: 80%;
+  height: 80%;
   margin: auto;
-  right: 50%;
 
   z-index: 9;
 
@@ -517,10 +535,13 @@ main {
   z-index: 8;
 }
 
-.read_more_link {
-  color: var(--white);
-  border-bottom: var(--w-link-border);
-  width: fit-content;
-  cursor: pointer;
+.recent_card .more_link,
+.recent_card .more_link i {
+  text-decoration: underline;
+}
+
+.read_more_link:hover {
+  transform: translateX(5px);
+  transition-duration: 50ms;
 }
 /* Recent Post End */

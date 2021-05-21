@@ -14,10 +14,10 @@ async function getPosts(id){
     console.log(postsResults)
     document.title = postsResults.title.rendered; 
 
-    document.querySelector('.post_info').innerHTML += 
+    document.querySelector('.post_heading').innerHTML += 
     `
     <div class="post_name">
-      <h1>${postsResults.slug}</h1>
+      <h1 class="details_h1">${postsResults.slug}</h1>
     </div>
     `;
 
@@ -70,6 +70,26 @@ const getMedia = async () => {
     }, 5000)
 	}
   document.querySelector('.post_loading').innerHTML = '';
+
+    let modal = document.querySelector('.media_modal');
+    let img = document.querySelector('.media_img');
+    let modalImg = document.querySelector(".modal_content");
+    const span = document.getElementsByClassName("close")[0];
+
+    img.addEventListener("click", function(){
+      modal.style.display = "block";
+      modalImg.src = this.src;
+    }); 
+  
+    span.addEventListener("click", function(){
+      modal.style.display = "none";
+    });
+  
+    window.addEventListener("click", function(event){
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    });
 };
 getMedia(id);
 
@@ -83,6 +103,11 @@ const mediaCards = (mediaArray) => {
       <div class="media_text">
       ${mediaArray[i].caption.rendered}   
       </div>
+    </div>
+
+    <div class="media_modal">
+      <span class="close">×</span>
+      <img class="modal_content">
     </div>
       `;
   }

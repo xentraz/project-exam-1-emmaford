@@ -93,10 +93,12 @@ const recentCards = (recentArray) => {
       <h3 class="recent_card_title">${recentArray[j].title.rendered}</h3>
       <div class="white_p date">${recentArray[j].excerpt.rendered}</div>
       <p class="white_p recent_p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, omnis fugit! Fuga nihil odit sed ullam, quod dolor, iste sunt perspiciatis voluptatibus libero enim sit rerum aliquid repellendus accusantium, reiciendis cumque. Voluptatem, nam possimus in provident assumenda architecto adipisci iusto?</p>
-      <img class="recent_img1" src="${recentArray[j].jetpack_featured_media_url}"/>
+      <div class="recent_img1">
+      <img src="${recentArray[j].jetpack_featured_media_url}"/>
+      </div>
       <img class="recent_img2" src="${recentArray[j].jetpack_featured_media_url}"/>
       <div class="recent_post_link">
-      <p class="white_p read_more_link" onclick="window.location.href='/html/details.html?id=${recentArray[j].id}'">Read More...</p>
+      <p class="white_p more_link" onclick="window.location.href='/html/details.html?id=${recentArray[j].id}'">Read More<i class="fas fa-arrow-right"></i></p>
       </div>
     </div>
     `;
