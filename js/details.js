@@ -90,6 +90,7 @@ const getMedia = async () => {
         modal.style.display = "none";
       }
     });
+    // CAN'T FIGURE OUT WHY THE EVENTLISTENER ONLY WORKS ON THE FIRST ELEMENT (EVEN IF USED IN A LOOP)
 };
 getMedia(id);
 
