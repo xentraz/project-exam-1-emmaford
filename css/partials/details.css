@@ -8,6 +8,8 @@
     'text';
   padding: 0px;
   margin: 0px;
+
+  min-height: 80vh;
 }
 
 .post_loading {

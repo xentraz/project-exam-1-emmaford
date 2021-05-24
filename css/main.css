@@ -4,6 +4,9 @@
 
 @import './Partials/index.css';
 @import './Partials/details.css';
+@import './partials/archive.css';
+@import './partials/gallery.css';
+@import './partials/about.css';
 
 /* General Styles */
 @import './styles.css';

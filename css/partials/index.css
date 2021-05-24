@@ -538,10 +538,12 @@
 .recent_card .more_link,
 .recent_card .more_link i {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .read_more_link:hover {
   transform: translateX(5px);
   transition-duration: 50ms;
+  cursor: pointer;
 }
 /* Recent Post End */
