@@ -7,6 +7,7 @@
 @import './partials/archive.css';
 @import './partials/gallery.css';
 @import './partials/about.css';
+@import './partials/contact.css';
 
 /* General Styles */
 @import './styles.css';

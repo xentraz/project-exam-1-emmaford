@@ -1,0 +1,16 @@
+.contact_main {
+  width: 80%;
+  margin: auto;
+
+  min-height: 80vh;
+}
+
+.contact_h1 {
+  border: var(--border-black);
+  text-align: center;
+
+  width: fit-content;
+
+  padding: 0.5vh 2vw;
+  margin: 2vh 0.5vw;
+}
