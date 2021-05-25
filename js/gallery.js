@@ -8,7 +8,7 @@ document.querySelector('.loading').innerHTML =`<img src="https://cdn.dribbble.co
 const getFeatured = async () => {
 	try {
 		const response = await fetch(
-			'https://noroffcors.herokuapp.com/https://xentraz.tech/wp-json/wp/v2/media?parent' +id);
+			'https://noroffcors.herokuapp.com/https://xentraz.tech/wp-json/wp/v2/media?per_page=100');
 
 		const galleryResponse = await response.json();
 		blogAPI = galleryResponse;

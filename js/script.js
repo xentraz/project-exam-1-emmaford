@@ -86,6 +86,9 @@ const featuredCards = (featuredArray) => {
 const recentCards = (recentArray) => {
   const recentElm = document.querySelector('.recent_posts'); 
   for (let j = 0; j <recentArray.length; j++) {
+    if (j === 5) {
+      break;
+    }
     recentElm.innerHTML += 
     `
     <div class="recent_card">  
