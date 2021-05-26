@@ -75,7 +75,7 @@ const featuredCards = (featuredArray) => {
       `
       <div class="featured_card">
         <img class="featured_img" src="${featuredArray[i].jetpack_featured_media_url}"/>
-        <div class="featured_card_info" onclick="window.location.href='/html/details.html?id=${featuredArray[i].id}'">
+        <div class="featured_card_info" onclick="window.location.href='/details.html?id=${featuredArray[i].id}'">
           <h3 class="featured_card_title">${featuredArray[i].title.rendered}</h3>
           <p class="black_p">${featuredArray[i].excerpt.rendered}</p>
         </div>
@@ -103,7 +103,7 @@ const recentCards = (recentArray) => {
       </div>
       <img class="recent_img2" src="${recentArray[j].jetpack_featured_media_url}"/>
       <div class="recent_post_link">
-      <p class="white_p more_link" onclick="window.location.href='/html/details.html?id=${recentArray[j].id}'">Read More <i class="fas fa-arrow-right"></i></p>
+      <p class="white_p more_link" onclick="window.location.href='/details.html?id=${recentArray[j].id}'">Read More <i class="fas fa-arrow-right"></i></p>
       </div>
     </div>
     `;

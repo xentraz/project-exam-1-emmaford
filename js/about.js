@@ -46,7 +46,7 @@ const featuredCards = (featuredArray) => {
       `
       <div class="featured_card">
         <img class="featured_img" src="${featuredArray[i].jetpack_featured_media_url}"/>
-        <div class="featured_card_info" onclick="window.location.href='/html/details.html?id=${featuredArray[i].id}'">
+        <div class="featured_card_info" onclick="window.location.href='../details.html?id=${featuredArray[i].id}'">
           <h3 class="featured_card_title">${featuredArray[i].title.rendered}</h3>
           <p class="black_p">${featuredArray[i].excerpt.rendered}</p>
         </div>

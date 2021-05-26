@@ -68,7 +68,7 @@ const recentCards = (recentArray) => {
       </div>
       <img class="recent_img2" src="${recentArray[j].jetpack_featured_media_url}"/>
       <div class="recent_post_link">
-      <p class="white_p more_link" onclick="window.location.href='/html/details.html?id=${recentArray[j].id}'">Read More <i class="fas fa-arrow-right"></i></p>
+      <p class="white_p more_link" onclick="window.location.href='../details.html?id=${recentArray[j].id}'">Read More <i class="fas fa-arrow-right"></i></p>
       </div>
     </div>
     `;
