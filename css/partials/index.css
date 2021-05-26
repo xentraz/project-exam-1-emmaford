@@ -130,7 +130,6 @@
 
   max-height: 70vh;
   bottom: 2%;
-
   position: absolute;
 
   display: flex;
@@ -547,3 +546,24 @@
   cursor: pointer;
 }
 /* Recent Post End */
+
+.all_posts_btn {
+  background-color: var(--green);
+  border-style: none;
+
+  padding: 2vh 0vw;
+}
+
+.all_posts_btn a {
+  padding: 2vh 4vw;
+
+  text-decoration: none;
+}
+
+.all_posts_btn a i {
+  padding-left: 5px;
+}
+
+.all_posts_btn a:hover {
+  text-decoration: underline;
+}

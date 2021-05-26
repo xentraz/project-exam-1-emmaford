@@ -30,6 +30,7 @@ function showSlides(n) {
 let blogAPI = [];
 
 document.querySelector('.loading').innerHTML =`<img src="https://cdn.dribbble.com/users/1747793/screenshots/4328938/web-loop.gif"/>`;
+document.querySelector('.recent_container').classList.add('hide');
 
 const getFeatured = async () => {
 	try {
@@ -60,6 +61,7 @@ const getFeatured = async () => {
     }, 10000)
 	}
   document.querySelector('.loading').innerHTML = ``;
+  document.querySelector('.recent_container').classList.remove('hide');
 };
 
 getFeatured();

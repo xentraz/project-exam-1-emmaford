@@ -85,7 +85,6 @@ h4 {
   font-family: var(--p);
   font-size: 1.3rem;
   font-weight: 300;
-  /* text-transform: uppercase; */
 
   color: var(--white);
 }
