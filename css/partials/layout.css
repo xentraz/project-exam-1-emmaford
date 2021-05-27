@@ -97,8 +97,20 @@ h4 {
   color: var(--black);
 }
 
+.red_p {
+  font-family: var(--p);
+  font-size: 1.2rem;
+  font-weight: 400;
+
+  color: var(--red);
+}
+
 .hide {
   display: none;
+}
+
+.show {
+  display: block;
 }
 
 .alert {

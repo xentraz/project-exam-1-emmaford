@@ -90,6 +90,7 @@
   text-transform: uppercase;
 
   color: var(--white);
+  cursor: pointer;
 }
 
 .about_me_socials i:hover {

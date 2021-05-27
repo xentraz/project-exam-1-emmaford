@@ -10,6 +10,8 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
+
+  position: relative;
 }
 
 .logo p {
@@ -18,6 +20,10 @@ header {
   color: var(--green);
   padding: 0px;
   margin: 0px;
+}
+
+.menu_wrapper {
+  overflow: hidden;
 }
 
 .menu_wrapper ul {
@@ -43,4 +49,85 @@ header {
 .menu_wrapper ul li a:hover {
   border-bottom: var(--b-link-border);
   padding-bottom: 2px;
+}
+
+.menu_wrapper ul li .current {
+  border-bottom: var(--b-link-border);
+  padding-bottom: 2px;
+}
+
+#menu_toggle {
+  display: none;
+}
+
+.menu_icon {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  .menu_wrapper {
+    height: auto;
+    z-index: 99;
+  }
+
+  .menu_wrapper ul {
+    padding-top: 2vh;
+
+    display: inline-flex;
+    flex-direction: column;
+
+    max-height: 0;
+    overflow: hidden;
+
+    -webkit-transition: max-height 0.3s;
+    transition: max-height 0.3s;
+
+    position: absolute;
+
+    top: 5vh;
+    right: 0;
+    width: 50%;
+
+    text-align: center;
+  }
+
+  .menu_wrapper ul li {
+    padding: 1.5vh;
+
+    background-color: #4a594e9d;
+  }
+
+  .menu_wrapper ul li a {
+    color: var(--white);
+  }
+
+  .menu_wrapper ul li a:hover,
+  .menu_wrapper ul li .current {
+    border-bottom: var(--w-link-border);
+  }
+
+  .menu_icon {
+    width: 100px;
+    height: inherit;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 60px;
+  }
+
+  #menu_toggle:checked ~ ul {
+    max-height: 350px;
+  }
+
+  .menu_icon i {
+    height: 100px;
+    width: 100px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    font-size: 2.5rem;
+  }
 }
