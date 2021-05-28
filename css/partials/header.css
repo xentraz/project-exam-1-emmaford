@@ -28,19 +28,19 @@ header {
   overflow: hidden;
 }
 
-.menu_wrapper ul {
+ul {
   display: inline-flex;
   flex-direction: row;
 }
 
-.menu_wrapper ul li {
+ul li {
   list-style: none;
 
   color: var(--black);
   padding: 0px 15px;
 }
 
-.menu_wrapper ul li a {
+ul li a {
   font-family: var(--p);
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -48,12 +48,12 @@ header {
   color: var(--black);
 }
 
-.menu_wrapper ul li a:hover {
+ul li a:hover {
   border-bottom: var(--b-link-border);
   padding-bottom: 2px;
 }
 
-.menu_wrapper ul li .current {
+ul li .current {
   border-bottom: var(--b-link-border);
   padding-bottom: 2px;
 }
