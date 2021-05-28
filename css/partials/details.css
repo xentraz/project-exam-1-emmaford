@@ -166,3 +166,17 @@
     transform: scale(1);
   }
 }
+
+@media screen and (max-width: 870px) {
+  .details_main {
+    margin: 100px 0px;
+  }
+
+  .modal_content {
+    margin: 100px 10%;
+  }
+
+  .close {
+    top: 100px;
+  }
+}

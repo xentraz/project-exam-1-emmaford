@@ -59,7 +59,7 @@ const mediaCards = (mediaArray) => {
     featElm.innerHTML += 
     `
     <div class="gallery_cards media_cards">
-      <img class="gallery_img media_img" src="${mediaArray[i].guid.rendered}"/>
+      <img class="gallery_img media_img" src="${mediaArray[i].guid.rendered}" alt="${mediaArray[i].alt_text}"/>
       <h3 class="featured_card_title">${mediaArray[i].caption.rendered}</h3>
     </div>
 

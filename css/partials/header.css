@@ -139,6 +139,7 @@ header {
     top: 0;
     right: 0;
     line-height: 60px;
+    cursor: pointer;
   }
 
   #menu_toggle:checked ~ ul {

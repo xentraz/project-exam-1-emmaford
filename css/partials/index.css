@@ -311,6 +311,7 @@
   width: 35vh;
 
   grid-row: 1/1;
+  cursor: pointer;
 }
 
 .featured_card_info h3:hover {

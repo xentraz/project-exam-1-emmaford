@@ -28,7 +28,7 @@
 }
 
 .gallery_cards {
-  height: 350px;
+  height: 330px;
   width: 400px;
 
   display: flex;
@@ -58,6 +58,12 @@
 }
 
 @media screen and (max-width: 870px) {
+  .gallery_main {
+    margin: 100px 10%;
+  }
+}
+
+@media screen and (max-width: 450px) {
   .gallery_main {
     margin: 100px 10%;
   }

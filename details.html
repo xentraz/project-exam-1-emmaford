@@ -22,22 +22,26 @@
 </head>
 <body>
   <header>
-    <div class="logo">
-      <p>E.F.T</p>
-    </div>
-    <div class="menu_wrapper">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="/html/archive.html">Archive</a></li>
-        <li><a href="/html/gallery.html">Gallery</a></li>
-        <li><a href="/html/about.html">About</a></li>
-        <li><a href="/html/contact.html">Contact</a></li>
-      </ul>
+    <div class="header_wrapper">
+      <div class="logo">
+        <p>E.F.T</p>
+      </div>
+      <div class="menu_wrapper">
+        <input type="checkbox" id="menu_toggle">
+        <label for="menu_toggle" class="menu_icon"><i class="fa fa-bars"></i></label>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a class="current" href="/archive.html">Archive</a></li>
+          <li><a href="/gallery.html">Gallery</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
   </header>
   <main class="details_main">
     <div class="alert"></div>
-    <div class="post_loading"></div>
+    <div class="loading"></div>
     <div class="post_heading"></div>
     <div class="post_media">
       

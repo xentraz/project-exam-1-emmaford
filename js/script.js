@@ -74,7 +74,7 @@ const featuredCards = (featuredArray) => {
       featElm.innerHTML += 
       `
       <div class="featured_card">
-        <img class="featured_img" src="${featuredArray[i].jetpack_featured_media_url}"/>
+        <img class="featured_img" src="${featuredArray[i].jetpack_featured_media_url}" onclick="window.location.href='/details.html?id=${featuredArray[i].id}'"/>
         <div class="featured_card_info" onclick="window.location.href='/details.html?id=${featuredArray[i].id}'">
           <h3 class="featured_card_title">${featuredArray[i].title.rendered}</h3>
           <p class="black_p">${featuredArray[i].excerpt.rendered}</p>
@@ -110,3 +110,12 @@ const recentCards = (recentArray) => {
   }
 }
 
+// altInfo(mediaAPI);
+// const altInfo = (altArray) => {
+// 	const mediaAltTxt = document.querySelector('.featured_img');
+//   for (let i = 0; i < altArray.length; i++) {
+//     mediaAltTxt.innerHTML += `
+//     ${mediaAltTxt.alt_text}
+//       `;
+//   }
+// };

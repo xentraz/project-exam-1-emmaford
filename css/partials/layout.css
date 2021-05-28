@@ -60,7 +60,7 @@ h3 {
 h4 {
   font-family: var(--h4);
   font-size: 1.6rem;
-  font-weight: 300;
+  font-weight: 400;
   text-align: right;
 
   color: var(--black);
@@ -116,18 +116,21 @@ h4 {
 }
 
 @media screen and (max-width: 1250px) {
-  h1 {
+  h1,
+  .about_me_socials i {
     font-size: 2.9rem;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  h1 {
+  h1,
+  .about_me_socials i {
     font-size: 2.7rem;
     padding: 0.3vh 1.8vw;
   }
 
-  .white_p {
+  .white_p,
+  .black_p {
     font-size: 1.2rem;
   }
 
@@ -137,18 +140,26 @@ h4 {
 }
 
 @media screen and (max-width: 800px) {
-  h1 {
+  h1,
+  .about_me_socials i {
     font-size: 2.2rem;
     padding: 0.3vh 1.8vw;
   }
 
-  .white_p {
+  .white_p,
+  .black_p {
     font-size: 1.1rem;
+  }
+
+  .loading img,
+  .post_loading img {
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 700px) {
-  h1 {
+  h1,
+  .about_me_socials i {
     font-size: 2rem;
     padding: 0.2vh 1.6vw;
   }
@@ -159,7 +170,8 @@ h4 {
 }
 
 @media screen and (max-width: 650px) {
-  h1 {
+  h1,
+  .about_me_socials i {
     font-size: 1.8rem;
     padding: 0.2vh 1.6vw;
   }
@@ -168,7 +180,9 @@ h4 {
     font-size: 1.6rem;
   }
 
-  .white_p {
+  .white_p,
+  .black_p,
+  .contact_form .black_p {
     font-size: 0.9rem;
   }
 
@@ -178,7 +192,8 @@ h4 {
 }
 
 @media screen and (max-width: 600px) {
-  h1 {
+  h1,
+  .about_me_socials i {
     font-size: 1.6rem;
     padding: 0.2vh 1.6vw;
   }
@@ -187,8 +202,11 @@ h4 {
     font-size: 1.4rem;
   }
 
-  .white_p {
+  .white_p,
+  .black_p,
+  .contact_form .black_p {
     font-size: 0.9rem;
+    word-wrap: break-word;
   }
 
   h3 {
@@ -203,7 +221,14 @@ h4 {
     padding: 0.2vh 1.6vw;
   }
 
-  .white_p {
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .white_p,
+  .black_p,
+  .contact_form .black_p {
     font-size: 0.9rem;
+    word-wrap: break-word;
   }
 }

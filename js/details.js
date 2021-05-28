@@ -100,9 +100,9 @@ const mediaCards = (mediaArray) => {
   for (let i = 0; i < mediaArray.length; i++) {
     mediaElm.innerHTML += `
     <div class="media_cards">
-      <img class="media_img" src="${mediaArray[i].guid.rendered}"/>
+      <img class="media_img" src="${mediaArray[i].guid.rendered}" alt="${mediaArray[i].alt_text}"/>
       <div class="media_text">
-      ${mediaArray[i].caption.rendered}   
+      ${mediaArray[i].caption.rendered}
       </div>
     </div>
 
