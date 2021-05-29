@@ -1,5 +1,5 @@
 .details_main {
-  grid-area: 'main';
+  grid-area: main;
 
   display: grid;
   grid-template-areas:
@@ -13,14 +13,14 @@
 }
 
 .post_loading {
-  grid-area: 'heading';
+  grid-area: heading;
 
   display: flex;
   justify-content: center;
 }
 
 .post_heading {
-  grid-area: 'heading';
+  grid-area: heading;
 
   width: 80%;
   margin: auto;
@@ -39,7 +39,7 @@
 }
 
 .post_media {
-  grid-area: 'media';
+  grid-area: media;
 
   width: 80%;
   margin: auto;
@@ -89,7 +89,7 @@
 }
 
 .post_text {
-  grid-area: 'text';
+  grid-area: text;
 
   width: 80%;
   margin: 4vh auto;

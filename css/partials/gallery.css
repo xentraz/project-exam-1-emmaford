@@ -1,4 +1,6 @@
 .gallery_main {
+  grid-area: main;
+
   width: 80%;
   margin: auto;
 
@@ -21,6 +23,8 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+
+  margin-bottom: 2vh;
 }
 
 .media_posts .featured_card_title {
@@ -48,15 +52,8 @@
 }
 
 .gallery_main .all_posts_btn {
-  margin: 0vh 0.5vw;
-}
-
-.gallery_main .all_posts_btn a {
-  text-decoration: none;
-}
-
-.gallery_main .all_posts_btn a:hover {
-  text-decoration: underline;
+  margin: 2vh 0.5vw;
+  bottom: 0;
 }
 
 @media screen and (max-width: 1025px) {

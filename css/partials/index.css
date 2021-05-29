@@ -3,7 +3,7 @@
 }
 
 .index_main {
-  grid-area: 'main';
+  grid-area: main;
 
   display: grid;
   grid-template-areas:
@@ -15,7 +15,7 @@
 }
 
 .intro {
-  grid-area: 'intro';
+  grid-area: intro;
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -82,7 +82,7 @@
   grid-row: 2/4;
 
   width: 99%;
-  max-height: auto;
+  height: auto;
 
   position: absolute;
 }
@@ -220,14 +220,12 @@
 
 .index_desc p {
   width: 90%;
-  margin: right;
 
   padding: 0vh 0vw 1vh 0vw;
 }
 
 .more_link {
   width: 90%;
-  margin: right;
 
   text-align: right;
 }
@@ -262,7 +260,7 @@
 }
 
 .featured_container {
-  grid-area: 'featured';
+  grid-area: featured;
   height: auto;
   width: 80%;
   margin: auto;
@@ -292,6 +290,10 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.recent_posts {
+  margin-bottom: 2vh;
 }
 
 .featured_card {
@@ -343,11 +345,10 @@
 
 /* Next Up */
 .next_up_container {
-  grid-area: 'next_up';
+  grid-area: next_up;
 
   height: 45vh;
   width: 85%;
-  margin: left;
   background-color: var(--green);
 }
 
@@ -422,7 +423,7 @@
 
 /* Recent Posts */
 .recent_container {
-  grid-area: 'recent';
+  grid-area: recent;
 
   width: 80%;
   margin: auto;
@@ -553,21 +554,16 @@
 .all_posts_btn {
   background-color: var(--green);
   border-style: none;
-
-  padding: 2vh 0vw;
-}
-
-.all_posts_btn a {
   padding: 2vh 4vw;
 
   text-decoration: none;
 }
 
-.all_posts_btn a i {
+.all_posts_btn span i {
   padding-left: 5px;
 }
 
-.all_posts_btn a:hover {
+.all_posts_btn span:hover {
   text-decoration: underline;
 }
 
@@ -906,7 +902,6 @@
   }
 
   .recent_card {
-    /* margin: 4vh 0vw; */
     border: 2vh 0vw solid var(--white);
   }
 

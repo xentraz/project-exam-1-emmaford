@@ -1,4 +1,6 @@
 .archive_main {
+  grid-area: main;
+
   width: 80%;
   margin: auto;
 
@@ -77,11 +79,13 @@
   color: var(--white);
 }
 
-.archive_main .all_posts_btn a {
+.archive_main .all_posts_btn {
   text-decoration: none;
+  padding: 2vh 4vw;
+  margin: 2vh 0vw;
 }
 
-.archive_main .all_posts_btn a:hover {
+.archive_main .all_posts_btn span:hover {
   text-decoration: underline;
 }
 
