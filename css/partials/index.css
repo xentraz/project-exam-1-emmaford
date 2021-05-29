@@ -769,10 +769,6 @@
     height: 10vh;
     width: 10vh;
   }
-
-  .recent_card {
-    margin: 4vh 0vw;
-  }
 }
 
 @media screen and (max-width: 550px) {
@@ -915,11 +911,5 @@
 @media screen and (max-width: 450px) {
   .next_up_container {
     height: 70vh;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .intro .bkg_color {
-    min-height: 60vh;
   }
 }
