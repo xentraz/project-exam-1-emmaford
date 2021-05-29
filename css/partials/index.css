@@ -907,8 +907,8 @@
   }
 
   .recent_card {
-    margin: 4vh 0vw;
-    /* border: 2vh solid var(--white); */
+    margin: 10vh 0vw;
+    border: 2vh solid var(--white);
   }
 
   .recent_img2 {
