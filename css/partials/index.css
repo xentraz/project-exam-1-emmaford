@@ -629,7 +629,7 @@
   }
 
   .recent_card {
-    max-height: 50vh;
+    /* max-height: 50vh; */
     width: 100%;
   }
 }
