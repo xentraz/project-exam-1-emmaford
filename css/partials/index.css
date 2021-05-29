@@ -707,7 +707,6 @@
     grid-template-rows: 1fr 1fr 2fr 3fr;
 
     margin: 4vh 0vw;
-    /* height: 50vh; */
   }
 
   .recent_bkg {
@@ -907,8 +906,8 @@
   }
 
   .recent_card {
-    margin: 10vh 0vw;
-    border: 2vh solid var(--white);
+    /* margin: 4vh 0vw; */
+    border: 2vh 0vw solid var(--white);
   }
 
   .recent_img2 {
