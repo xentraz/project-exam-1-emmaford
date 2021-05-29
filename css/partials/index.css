@@ -429,6 +429,7 @@
 }
 
 .recent_posts {
+  display: flex;
   flex-direction: column;
 }
 
@@ -695,6 +696,12 @@
     width: 125px;
   }
 
+  .recent_posts {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .recent_card {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -900,7 +907,8 @@
   }
 
   .recent_card {
-    margin: 6vh 0vw;
+    margin: 4vh 0vw;
+    /* border: 2vh solid var(--white); */
   }
 
   .recent_img2 {

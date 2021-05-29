@@ -16,7 +16,7 @@ const getFeatured = async () => {
 
     const searchText = document.querySelector('#search');
 
-    searchText.onkeyup = function (event) {
+    searchText.oninput = function (event) {
       event.preventDefault();
       console.log(event.target.value);
       
@@ -24,7 +24,7 @@ const getFeatured = async () => {
           return value.slug.toLowerCase() === event.target.value.toLowerCase();
       });
 
-      console.log(filteredArray)
+      console.log(filteredArray);
 
       if (!event.target.value) {
         recentCards(blogAPI);
@@ -74,4 +74,3 @@ const recentCards = (recentArray) => {
     `;
   }
 }
-

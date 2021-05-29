@@ -79,4 +79,9 @@
   .gallery_main {
     margin: 100px 10%;
   }
+
+  .gallery_cards {
+    height: 300px;
+    width: 100%;
+  }
 }
