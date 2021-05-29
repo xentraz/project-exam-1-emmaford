@@ -107,6 +107,8 @@ ul li .current {
 
     position: absolute;
 
+    z-index: 999;
+
     top: 5vh;
     right: 0;
     width: 50%;
