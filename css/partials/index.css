@@ -552,6 +552,7 @@
 /* Recent Post End */
 
 .all_posts_btn {
+  width: fit-content;
   background-color: var(--green);
   border-style: none;
   padding: 2vh 4vw;

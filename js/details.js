@@ -114,3 +114,7 @@ const mediaCards = (mediaArray) => {
   }
   });
 };
+
+function goBack() {
+  window.history.back();
+}
