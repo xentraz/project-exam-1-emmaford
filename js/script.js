@@ -99,7 +99,7 @@ const recentCards = (recentArray) => {
       <div class="white_p date">${recentArray[j].excerpt.rendered}</div>
       <p class="white_p recent_p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, omnis fugit! Fuga nihil odit sed ullam, quod dolor, iste sunt perspiciatis voluptatibus libero enim sit rerum aliquid repellendus accusantium, reiciendis cumque. Voluptatem, nam possimus in provident assumenda architecto adipisci iusto?</p>
       <div class="recent_img1">
-      <img src="${recentArray[j].jetpack_featured_media_url}"/>
+      <img src="${recentArray[j].jetpack_featured_media_url}" alt="${recentArray[j].title.rendered}"/>
       </div>
       <img class="recent_img2" src="${recentArray[j].jetpack_featured_media_url}"/>
       <div class="recent_post_link">
@@ -109,13 +109,3 @@ const recentCards = (recentArray) => {
     `;
   }
 }
-
-// altInfo(mediaAPI);
-// const altInfo = (altArray) => {
-// 	const mediaAltTxt = document.querySelector('.featured_img');
-//   for (let i = 0; i < altArray.length; i++) {
-//     mediaAltTxt.innerHTML += `
-//     ${mediaAltTxt.alt_text}
-//       `;
-//   }
-// };

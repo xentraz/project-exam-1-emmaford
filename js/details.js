@@ -70,39 +70,19 @@ const getMedia = async () => {
     }, 5000)
 	}
   document.querySelector('.post_loading').innerHTML = '';
-
-    let modal = document.querySelector('.media_modal');
-    let img = document.querySelector('.media_img');
-    let modalImg = document.querySelector(".modal_content");
-    const span = document.getElementsByClassName("close")[0];
-
-    img.addEventListener("click", function(){
-      modal.style.display = "block";
-      modalImg.src = this.src;
-    }); 
-  
-    span.addEventListener("click", function(){
-      modal.style.display = "none";
-    });
-  
-    window.addEventListener("click", function(event){
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    });
-    // CAN'T FIGURE OUT WHY THE EVENTLISTENER ONLY WORKS ON THE FIRST ELEMENT (EVEN IF USED IN A LOOP)
 };
 getMedia(id);
 
 
 const mediaCards = (mediaArray) => {
 	const mediaElm = document.querySelector('.post_media');
-  for (let i = 0; i < mediaArray.length; i++) {
-    mediaElm.innerHTML += `
+  mediaArray.forEach(details => {
+    mediaElm.innerHTML += 
+    `
     <div class="media_cards">
-      <img class="media_img" src="${mediaArray[i].guid.rendered}" alt="${mediaArray[i].alt_text}"/>
+      <img class="media_img" src="${details.guid.rendered}" alt="${details.alt_text}"/>
       <div class="media_text">
-      ${mediaArray[i].caption.rendered}
+      ${details.caption.rendered}
       </div>
     </div>
 
@@ -111,5 +91,26 @@ const mediaCards = (mediaArray) => {
       <img class="modal_content">
     </div>
       `;
+  });
+
+  let img = document.querySelectorAll('.media_img');
+  let modal = document.querySelector('.media_modal');
+  let modalImg = document.querySelector(".modal_content");
+  const span = document.getElementsByClassName("close")[0];
+
+  img.forEach(link => link.addEventListener("click", function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    })
+  );
+
+  span.addEventListener("click", function(){
+  modal.style.display = "none";
+  });
+
+  window.addEventListener("click", function(event){
+  if (event.target == modal) {
+    modal.style.display = "none";
   }
+  });
 };
