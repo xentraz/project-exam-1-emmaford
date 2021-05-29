@@ -77,6 +77,14 @@
   color: var(--white);
 }
 
+.archive_main .all_posts_btn a {
+  text-decoration: none;
+}
+
+.archive_main .all_posts_btn a:hover {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 870px) {
   .archive_main {
     margin: 100px 10%;

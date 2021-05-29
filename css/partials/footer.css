@@ -34,7 +34,7 @@ footer {
 
 .socials {
   grid-column: 2/2;
-  grid-row: 2/2;
+  grid-row: 1/1;
   width: 100%;
 
   display: flex;
@@ -43,13 +43,15 @@ footer {
   align-items: center;
 }
 
-.socials p {
+.socials i {
   cursor: pointer;
+  font-size: 2rem;
+  color: var(--white);
 }
 
 .copy_right {
   grid-column: 2/2;
-  grid-row: 1/1;
+  grid-row: 2/2;
 
   display: inline-flex;
   justify-content: center;

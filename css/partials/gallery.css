@@ -47,6 +47,18 @@
   padding: 5px;
 }
 
+.gallery_main .all_posts_btn {
+  margin: 0vh 0.5vw;
+}
+
+.gallery_main .all_posts_btn a {
+  text-decoration: none;
+}
+
+.gallery_main .all_posts_btn a:hover {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 1025px) {
   .media_posts {
     display: flex;
