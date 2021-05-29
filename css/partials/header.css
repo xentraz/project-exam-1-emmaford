@@ -72,7 +72,7 @@ ul li .current {
 
 @media screen and (max-width: 870px) {
   main {
-    margin: 100px 0px;
+    margin: 100px 0px 0px 0px;
   }
 
   .header_wrapper {

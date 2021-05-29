@@ -68,13 +68,13 @@
 
 @media screen and (max-width: 870px) {
   .gallery_main {
-    margin: 100px 10%;
+    margin: 100px 5% 0% 5%;
   }
 }
 
 @media screen and (max-width: 450px) {
   .gallery_main {
-    margin: 100px 10%;
+    margin: 100px 5% 0% 5%;
   }
 
   .gallery_cards {

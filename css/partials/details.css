@@ -179,7 +179,7 @@
 
 @media screen and (max-width: 870px) {
   .details_main {
-    margin: 100px 0px;
+    margin: 100px 0px 0px 0px;
   }
 
   .modal_content {

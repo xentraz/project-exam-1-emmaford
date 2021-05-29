@@ -91,7 +91,7 @@
 
 @media screen and (max-width: 870px) {
   .archive_main {
-    margin: 100px 10%;
+    margin: 100px 5% 0% 5%;
   }
 
   .search_form label {
