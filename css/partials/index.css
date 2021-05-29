@@ -629,7 +629,6 @@
   }
 
   .recent_card {
-    /* max-height: 50vh; */
     width: 100%;
   }
 }
@@ -708,6 +707,7 @@
     grid-template-rows: 1fr 1fr 2fr 3fr;
 
     margin: 4vh 0vw;
+    /* height: 50vh; */
   }
 
   .recent_bkg {
