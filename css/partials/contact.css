@@ -64,6 +64,8 @@
 
 .continue span {
   margin: 2vh 0vw;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .continue:hover {
