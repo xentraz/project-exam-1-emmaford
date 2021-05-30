@@ -79,13 +79,18 @@
   color: var(--white);
 }
 
-.archive_main .all_posts_btn {
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons .cta_btn1 {
   text-decoration: none;
   padding: 2vh 4vw;
   margin: 2vh 0vw;
 }
 
-.archive_main .all_posts_btn span:hover {
+.buttons .cta_btn1 span:hover {
   text-decoration: underline;
 }
 

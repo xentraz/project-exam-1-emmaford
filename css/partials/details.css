@@ -15,6 +15,9 @@
 .post_loading {
   grid-area: heading;
 
+  width: 80%;
+  margin: auto;
+
   display: flex;
   justify-content: center;
 }
@@ -158,7 +161,7 @@
   animation-duration: 0.3s;
 }
 
-.details_main .all_posts_btn {
+.details_main .cta_btn1 {
   margin-left: 10%;
 }
 

@@ -1,3 +1,4 @@
+/* General Laout */
 body {
   margin: 0px;
   padding: 0px;
@@ -9,6 +10,7 @@ body {
     'footer';
 }
 
+/* Text Styling */
 body,
 h1,
 h2,
@@ -93,6 +95,7 @@ h4 {
   color: var(--red);
 }
 
+/* Errors & JS */
 .hide {
   display: none;
 }
@@ -103,7 +106,6 @@ h4 {
 
 .alert {
   width: 100%;
-  /* height: 100px; */
 }
 
 .danger {
@@ -115,10 +117,35 @@ h4 {
   text-align: center;
 }
 
+/* Buttons */
+.cta_btn1 {
+  width: fit-content;
+  background-color: var(--green);
+  border-style: none;
+  padding: 2vh 4vw;
+
+  text-decoration: none;
+}
+
+.cta_btn1 span i {
+  padding-left: 5px;
+}
+
+.cta_btn1 span:hover {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 1250px) {
   h1,
   .about_me_socials i {
     font-size: 2.9rem;
+  }
+
+  .loading {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 

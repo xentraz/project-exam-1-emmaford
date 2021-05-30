@@ -1,13 +1,18 @@
 .gallery_main {
   grid-area: main;
 
-  width: 80%;
-  margin: auto;
-
   min-height: 80vh;
+
+  display: grid;
+  grid-template-areas:
+    'heading'
+    'gallery'
+    'button';
 }
 
 .gallery_h1 {
+  grid-area: heading;
+
   border: var(--border-black);
   text-align: center;
 
@@ -18,6 +23,10 @@
 }
 
 .media_posts {
+  grid-area: gallery;
+
+  width: 100%;
+
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -52,16 +61,14 @@
 }
 
 .gallery_main .all_posts_btn {
+  grid-area: button;
   margin: 2vh 0.5vw;
   bottom: 0;
 }
 
 @media screen and (max-width: 1025px) {
   .media_posts {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
+    width: 100%;
     justify-content: center;
   }
 }
