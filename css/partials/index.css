@@ -73,9 +73,45 @@
 .slides img {
   width: 100%;
   max-height: 60vh;
+  cursor: pointer;
 
   border: var(--border-white);
 }
+
+/* Tooltip */
+.slides .tooltip_msg {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgba(0, 0, 0, 0.466);
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 20;
+  top: 5%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.slides .tooltip_msg::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.425) transparent transparent transparent;
+}
+
+.slides:hover .tooltip_msg {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Tooltip end */
 
 .slider_container .controls {
   grid-column: 1/4;
