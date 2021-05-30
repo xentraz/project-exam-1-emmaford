@@ -8,7 +8,7 @@
 }
 
 .search_bar {
-  min-height: 20vh;
+  max-height: 25vh;
   margin: 2vh 0vw;
 
   display: grid;
