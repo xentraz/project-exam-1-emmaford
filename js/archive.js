@@ -33,11 +33,11 @@ const getArchive = async () => {
       console.log(filteredArray);
 
       if (!event.target.value) {
-        recentCards(archiveApi);
+        archiveCardsAll(archiveApi);
       }
 
       document.querySelector('.recent_posts').innerHTML = '';
-      recentCards(filteredArray);
+      archiveCardsAll(filteredArray);
     };
 
 	} catch (error) {
