@@ -1,29 +1,29 @@
-// Image Slider (GO THORUGH AND CHANGE NAMES)
-var slideIndex = 1;
-showSlides(slideIndex);
+// Image Slider
+var slideNr = 1;
+displaySlide(slideNr);
 
 function nextSlide(n) {
-  showSlides(slideIndex += n);
+  displaySlide(slideNr += n);
 }
 
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  displaySlide(slideNr = n);
 }
 
-function showSlides(n) {
+function displaySlide(n) {
   var i;
   var slides = document.getElementsByClassName("slides");
   var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  if (n > slides.length) {slideNr = 1}
+  if (n < 1) {slideNr = slides.length}
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  slides[slideNr-1].style.display = "block";
+  dots[slideNr-1].className += " active";
 }
 
 // API Fetch Featured Posts 

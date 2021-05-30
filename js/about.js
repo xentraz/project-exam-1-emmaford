@@ -1,4 +1,4 @@
-let blogAPI = [];
+let aboutApi = [];
 
 document.querySelector('.loading').innerHTML =`<img src="https://cdn.dribbble.com/users/1747793/screenshots/4328938/web-loop.gif"/>`;
 document.querySelector('.about_me_wrapper').classList.add('hide');
@@ -11,10 +11,10 @@ const getFeatured = async () => {
 		);
 
 		const featuredResponse = await response.json();
-		blogAPI = featuredResponse;
-    console.log(blogAPI)
+		aboutApi = featuredResponse;
+    console.log(aboutApi)
 
-    featuredCards(blogAPI);
+    featuredCards(aboutApi);
 
 	} catch (error) {
 		document.querySelector('.alert').innerHTML = showAlertToUser (
@@ -45,7 +45,7 @@ const featuredCards = (featuredArray) => {
       featElm.innerHTML += 
       `
       <div class="featured_card">
-        <img class="featured_img" src="${featuredArray[i].jetpack_featured_media_url}"/>
+        <img class="featured_img" src="${featuredArray[i].jetpack_featured_media_url}" onclick="window.location.href='../details.html?id=${featuredArray[i].id}'"/>
         <div class="featured_card_info" onclick="window.location.href='../details.html?id=${featuredArray[i].id}'">
           <h3 class="featured_card_title">${featuredArray[i].title.rendered}</h3>
           <p class="black_p">${featuredArray[i].excerpt.rendered}</p>

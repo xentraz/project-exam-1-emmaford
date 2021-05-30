@@ -14,7 +14,7 @@ const getGallery = async () => {
 		blogAPI = galleryResponse;
     console.log(blogAPI)
 
-    mediaCards(blogAPI);
+    galleryCards(blogAPI);
 
 	} catch (error) {
 		document.querySelector('.alert').innerHTML = showAlertToUser (
@@ -33,7 +33,7 @@ const getGallery = async () => {
 getGallery(id);
 
 
-const mediaCards = (mediaArray) => {
+const galleryCards = (mediaArray) => {
 	const featElm = document.querySelector('.media_posts');
   mediaArray.forEach(element => {
     featElm.innerHTML += 

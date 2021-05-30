@@ -52,11 +52,11 @@ sendBtn.onclick = (event) => {
 
     document.querySelector('.contact_form').innerHTML = `
     <div class="thank_you">
-      <h2>Thank you</h2>
+      <h2>Thank you!</h2>
       <p class="white_p">I will get back you as soon as possible</p>
       <p class="white_p">usually within 2-3 business days.</p>
     </div>
-    
+    +
     `;
   };
 

@@ -1,23 +1,23 @@
-let blogAPI = [];
+let archiveApi = [];
 
 document.querySelector('.loading').innerHTML =`<img src="https://cdn.dribbble.com/users/1747793/screenshots/4328938/web-loop.gif"/>`;
 
-const getFeatured = async () => {
+const getArchive = async () => {
 	try {
 		const response = await fetch(
 			'https://noroffcors.herokuapp.com/https://xentraz.tech/wp-json/wp/v2/posts?per_page=100'
 		);
 
 		const featuredResponse = await response.json();
-		blogAPI = featuredResponse;
-    console.log(blogAPI);
+		archiveApi = featuredResponse;
+    console.log(archiveApi);
 
-    recentCards(blogAPI);
+    archiveCards(archiveApi);
     
     const loadAll = document.querySelector('.load_all'); 
     loadAll.addEventListener("click", function(){
       document.querySelector('.recent_posts').innerHTML = '';
-      recentCardsAll(blogAPI);
+      archiveCardsAll(archiveApi);
       });
 
     const searchText = document.querySelector('#search');
@@ -26,14 +26,14 @@ const getFeatured = async () => {
       event.preventDefault();
       console.log(event.target.value);
       
-      let filteredArray = blogAPI.filter((value) => {
+      let filteredArray = archiveApi.filter((value) => {
           return value.slug.toLowerCase() === event.target.value.toLowerCase();
       });
 
       console.log(filteredArray);
 
       if (!event.target.value) {
-        recentCards(blogAPI);
+        recentCards(archiveApi);
       }
 
       document.querySelector('.recent_posts').innerHTML = '';
@@ -56,10 +56,9 @@ const getFeatured = async () => {
 	}
   document.querySelector('.loading').innerHTML = ``;
 };
+getArchive();
 
-getFeatured();
-
-const recentCards = (recentArray) => {
+const archiveCards = (recentArray) => {
   const recentElm = document.querySelector('.recent_posts'); 
   for (let j = 0; j <recentArray.length; j++) {
     if (j === 10) {
@@ -84,7 +83,7 @@ const recentCards = (recentArray) => {
   }
 }
 
-const recentCardsAll = (recentArray2) => {
+const archiveCardsAll = (recentArray2) => {
   const recentElm2 = document.querySelector('.recent_posts'); 
   for (let k = 0; k < recentArray2.length; k++) {
     recentElm2.innerHTML += 

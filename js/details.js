@@ -6,7 +6,7 @@ const id = params.get("id");
 document.querySelector('.post_loading').innerHTML = `<img src="https://cdn.dribbble.com/users/1747793/screenshots/4328938/web-loop.gif"/>`
 
 // POST DETAIL INFO
-async function getPosts(id){
+async function getDetails(id){
   try{
     const response = await fetch('https://noroffcors.herokuapp.com/https://xentraz.tech/wp-json/wp/v2/posts/' + id);
     const postsResults = await response.json(); 
@@ -41,7 +41,7 @@ async function getPosts(id){
   }
   document.querySelector('.post_loading').innerHTML = '';
 }
-getPosts(id);
+getDetails(id);
 
 
 // POST DETAIL IMAGES 
@@ -115,6 +115,7 @@ const mediaCards = (mediaArray) => {
   });
 };
 
+// Back Button
 function goBack() {
   window.history.back();
 }
